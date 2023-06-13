@@ -1,11 +1,11 @@
-// Show menu
+// Mostrar menú
 const showMenu = (toggleId, navId) => {
   const toggle = document.getElementById(toggleId),
     nav = document.getElementById(navId);
 
-  // Validate that variables exist
+  // Validar que existen variables
   if (toggle && nav) {
-    // We add the show-menu class to the div tag with the nav__menu class
+    // Agregamos la clase show-menu a la etiqueta div con la clase nav__menu
     toggle.addEventListener("click", () => {
       nav.classList.toggle("show-menu");
     });
@@ -13,37 +13,37 @@ const showMenu = (toggleId, navId) => {
 };
 showMenu("nav-toggle", "nav-menu");
 
-// Remove menu mobile
+// Quitar menú móvil
 const navLink = document.querySelectorAll(".nav__link");
 
 function linkAction() {
   const navMenu = document.getElementById("nav-menu");
-  // when we click on each nav__link, we remove the show-menu class
+  // Cuando hacemos clic en nav__link, eliminamos la clase show-menu
   navMenu.classList.remove("show-menu");
 }
 navLink.forEach((n) => n.addEventListener("click", linkAction));
 
-// Change background header
+// Cambiar encabezado de fondo
 function scrollHeader() {
   const nav = document.getElementById("header");
-  // when the scroll is greater than 200 viewport height, add the scroll-header class to the header tag
+  // cuando el desplazamiento es mayor que 200 de altura de ventana gráfica, agregue la clase de scroll-header a la etiqueta del encabezado
   if (this.scrollY >= 200) nav.classList.add("scroll-header");
   else nav.classList.remove("scroll-header");
 }
 
 window.addEventListener("scroll", scrollHeader);
 
-// Show scroll top
+// Mostrar desplazamiento superior
 function scrollTop() {
   const scrollTop = document.getElementById("scroll-top");
-  // when the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top
+  // cuando el desplazamiento es superior a la altura de la ventana gráfica 560, agregue la clase show-scroll a la etiqueta scroll-top
   if (this.scrollY >= 560) scrollTop.classList.add("scroll-top");
   else scrollTop.classList.remove("scroll-top");
 }
 
 window.addEventListener("scroll", scrollTop);
 
-// Scroll reveal animation
+// Animación de revelación de desplazamiento
 const sr = ScrollReveal({
   origin: "bottom",
   distance: "20px",
