@@ -9,7 +9,7 @@
   /*Colores*/
   --first-color: #017260;
   --first-color-alt: #167C38;
-  --secondary-color: #0B4654;
+  --secondary-color: #0097b2;
 
   --title-color: #393939;
   --text-color: #707070;
@@ -366,10 +366,8 @@ a.button {
 
 /* features */
 .features {
-  background: url('../images/design/bg/features-background.svg');
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-size: auto 75%;
+  background: rgb(1,114,96);
+  background: linear-gradient(90deg, rgba(1,114,96,1) 15%, rgba(22,124,56,1) 64%, rgba(0,151,178,1) 87%); 
 }
 @media screen and (min-width: 576px) {
   .features {
@@ -451,14 +449,14 @@ a.button {
   position: relative;
 }
 .big-card--01 {
-  background: linear-gradient(145.42deg, #FACC57 15.89%, #ED8D53 44.21%, #E5756A 64.28%, #E27A89 87.97%, #6684C2 110.52%);
+  background: white;
   box-shadow: 0px 0px 40px -10px rgba(0, 0, 0, 0.25);
-  color: #FFFFFF;
+  color: var(--secondary-color);
 }
 .big-card--02 {
   background: white;
   box-shadow: 0px 0px 40px -10px rgba(0, 0, 0, 0.25);
-  color: var(--black-color-001);
+  color: var(--secondary-color);
 }
 .big-card--01 i {
   color: rgba(255, 255, 255, .65);
@@ -495,7 +493,7 @@ a.button {
   padding: 24px 16px;
 }
 .clients__card h4 {
-  color: #E4797E;
+  color: var(--secondary-color);
   font-size: 18px;
   font-weight: 600;
   line-height: 1;
@@ -602,7 +600,7 @@ a.button {
   color: var(--black-color-001);
 }
 
-/* Paginas de eror */
+/* Paginas de error */
 
 .section-error {
   align-items: center;
@@ -812,10 +810,8 @@ a.button {
     z-index: 10;
   }
   .features:after {
-    background-size: cover;
-    background-position: 0;
-    background-repeat: no-repeat;
-    background-image: url('../images/design/bg/features-background.svg');
+    background: rgb(1,114,96);
+    background: linear-gradient(90deg, rgba(1,114,96,1) 15%, rgba(22,124,56,1) 64%, rgba(0,151,178,1) 87%); 
     bottom: 0;
     content: "";
     display: block;
@@ -835,4 +831,10 @@ a.button {
     height: 40px;
     font-size: 16px;
   }
+}
+/* planes */
+.planes {
+  background: rgb(1,114,96);
+  background: linear-gradient(90deg, rgba(1,114,96,1) 15%, rgba(22,124,56,1) 64%, rgba(0,151,178,1) 87%); 
+  margin-top: 32px;
 }
