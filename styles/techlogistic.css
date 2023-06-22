@@ -392,11 +392,11 @@ a.button {
   font-weight: 700;
   line-height: 38px;
 
-  background: linear-gradient(270deg, #6583C1 48.12%, rgba(101, 131, 193, 0) 74.15%), #F06844;
+  background: rgb(1,114,96);
+  background: linear-gradient(90deg, rgba(1,114,96,1) 15%, rgb(6, 178, 209) 87%); 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
 
   margin-bottom: 24px;
 }
