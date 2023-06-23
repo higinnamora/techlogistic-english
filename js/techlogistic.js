@@ -1,3 +1,8 @@
+// Variables
+let signInForm = document.getElementById("sign-in-form");
+let signInEmail = document.getElementById("sign-in-form-email");
+let signInPassword = document.getElementById("sign-in-form-password");
+
 // Mostrar menú
 const showMenu = (toggleId, navId) => {
   const toggle = document.getElementById(toggleId),
@@ -57,3 +62,28 @@ sr.reveal(
     interval: 200,
   }
 );
+
+// Cuando hace click en el botón submit, redirige a la página de dashboard
+function redirect() {
+  window.location.href = "dashboard/index.html";
+}
+
+// Formulario de Inicio de sesión
+
+signInForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const patternEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  const patternPassword = /^.{8,}$/;
+
+  console.log(signInEmail.value);
+  console.log(signInPassword.value)
+
+  if (
+    patternEmail.test(signInEmail.value) &&
+    patternPassword.test(signInPassword.value)
+  ) {
+    redirect();
+  }
+
+});
