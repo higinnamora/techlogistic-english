@@ -55,7 +55,8 @@
         <form action="" class="form">
           <div class="form-field">
             <label for="email">Correo electrónico</label>
-            <input type="email" placeholder="Ingresa tu correo electrónico" id="email" />
+            <input type="email" placeholder="Ingresa tu correo electrónico" id="email"
+              pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required />
           </div>
           <input class="button mb-1" type="submit" value="Recuperar contraseña">
           <p class="block text-center">
