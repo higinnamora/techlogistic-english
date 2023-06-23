@@ -838,3 +838,15 @@ a.button {
   background: linear-gradient(90deg, rgba(1,114,96,1) 15%, rgba(22,124,56,1) 64%, rgba(0,151,178,1) 87%); 
   margin-top: 32px;
 }
+/* GIF */
+.section-gif {
+  margin: auto;
+  padding-top: 4rem;
+  text-align: center;
+  position: relative;
+}
+.button-gif {
+  position: absolute;
+  top: 79%;
+  right: 38%;
+}
