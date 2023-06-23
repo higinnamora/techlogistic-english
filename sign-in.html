@@ -54,13 +54,14 @@
         <form action="" class="form">
           <div class="form-field">
             <label for="email">Correo electrónico</label>
-            <input type="email" placeholder="Ingresa tu correo electrónico" id="email" />
+            <input type="email" placeholder="Ingresa tu correo electrónico" id="email"
+              pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required />
           </div>
           <div class="form-field">
-            <label for="password">Password</label>
-            <input type="password" placeholder="Ingresa tu contraseña" id="password" />
+            <label for="password">Contraseña</label>
+            <input type="password" placeholder="Ingresa tu contraseña" id="password" pattern=".{8,}" required />
           </div>
-          <button class="button mb-1">Ingresar</button>
+          <input class="button mb-1" type="submit" value="Iniciar sesión">
           <p class="block text-center">
             ¿No tienes cuenta?
             <a href="./sign-up.html" class="text-primary">¡Registrarme!</a>
