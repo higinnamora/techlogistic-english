@@ -1,7 +1,26 @@
 // Variables
-let signInForm = document.getElementById("sign-in-form");
-let signInEmail = document.getElementById("sign-in-form-email");
-let signInPassword = document.getElementById("sign-in-form-password");
+const signInForm = document.getElementById("sign-in-form");
+const signInEmail = document.getElementById("sign-in-form-email");
+const signInPassword = document.getElementById("sign-in-form-password");
+
+const signUpForm = document.getElementById("sign-up-form");
+const signUpName = document.getElementById("sign-up-form-name");
+const signUpEmail = document.getElementById("sign-up-form-email");
+const signUpPassword = document.getElementById("sign-up-form-password");
+const signUpPasswordConfirm = document.getElementById(
+  "sign-up-form-password-confirm"
+);
+
+const recoveryPasswordForm = document.getElementById("recovery-password-form");
+const recoveryPasswordEmail = document.getElementById(
+  "recovery-password-form-email"
+);
+
+
+// Expresiones regulares
+const patternEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+const patternName = /^[a-zA-ZÀ-ÿ\s]{1,40}$/;
+const patternPassword = /^.{8,}$/;
 
 // Mostrar menú
 const showMenu = (toggleId, navId) => {
@@ -64,26 +83,71 @@ sr.reveal(
 );
 
 // Cuando hace click en el botón submit, redirige a la página de dashboard
-function redirect() {
-  window.location.href = "dashboard/index.html";
+function redirect(path) {
+  window.location.href = path;
 }
 
 // Formulario de Inicio de sesión
 
-signInForm.addEventListener("submit", (event) => {
+if (signInForm) {
+  signInForm.addEventListener("submit", (event) => {
   event.preventDefault();
-
-  const patternEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-  const patternPassword = /^.{8,}$/;
-
-  console.log(signInEmail.value);
-  console.log(signInPassword.value)
 
   if (
     patternEmail.test(signInEmail.value) &&
     patternPassword.test(signInPassword.value)
   ) {
-    redirect();
+    redirect("dashboard/index.html");
   }
+  });
+}
 
-});
+// Formulario de Registro
+
+// return and check if password and confirm password are the same
+function checkPassword() {
+  if (signUpPassword.value !== signUpPasswordConfirm.value) {
+    alert("Las contraseñas no coinciden");
+    return false;
+  }
+  return true;
+}
+
+if (signUpForm) {
+  signUpForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    let isPasswordValid = true;
+    if (!checkPassword()) {
+      isPasswordValid = false;
+    }
+
+    console.log('isPasswordValid', isPasswordValid)
+    console.log('patternEmail.test(signUpEmail.value)', patternEmail.test(signUpEmail.value))
+    console.log('patternName.test(signUpName.value)', patternName.test(signUpName.value))
+    console.log('patternPassword.test(signUpPassword.value)', patternPassword.test(signUpPassword.value))
+    console.log('patternPassword.test(signUpPasswordConfirm.value)', patternPassword.test(signUpPasswordConfirm.value))
+
+
+    if (
+      isPasswordValid &&
+      patternEmail.test(signUpEmail.value) &&
+      patternName.test(signUpName.value) &&
+      patternPassword.test(signUpPassword.value) &&
+      patternPassword.test(signUpPasswordConfirm.value)
+    ) {
+      redirect("./proceso-exitoso.html");
+    }
+  });
+}
+
+// Formulario de Recuperación de contraseña
+
+if (recoveryPasswordForm) {
+  recoveryPasswordForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    console.log('patternEmail.test(recoveryPasswordEmail.value)', patternEmail.test(recoveryPasswordEmail.value))
+    if (patternEmail.test(recoveryPasswordEmail.value)) {
+      redirect("./proceso-exitoso.html");
+    }
+  });
+}
