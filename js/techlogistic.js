@@ -19,7 +19,7 @@ const showMenu = (toggleId, navId) => {
 showMenu("nav-toggle", "nav-menu");
 
 // Quitar menú móvil
-const navLink = document.querySelectorAll(".nav__link");
+const navLink = document.querySelectorAll(".navigation__link");
 
 function linkAction() {
   const navMenu = document.getElementById("nav-menu");
