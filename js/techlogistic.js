@@ -104,7 +104,7 @@ if (signInForm) {
 
 // Formulario de Registro
 
-// return and check if password and confirm password are the same
+// Validar que las contraseñas coincidan
 function checkPassword() {
   if (signUpPassword.value !== signUpPasswordConfirm.value) {
     alert("Las contraseñas no coinciden");
@@ -116,17 +116,12 @@ function checkPassword() {
 if (signUpForm) {
   signUpForm.addEventListener("submit", (event) => {
     event.preventDefault();
-    let isPasswordValid = true;
-    if (!checkPassword()) {
-      isPasswordValid = false;
+
+    // Por defecto el valor de la variable es false
+    let isPasswordValid = false;
+    if (checkPassword()) {
+      isPasswordValid = true;
     }
-
-    console.log('isPasswordValid', isPasswordValid)
-    console.log('patternEmail.test(signUpEmail.value)', patternEmail.test(signUpEmail.value))
-    console.log('patternName.test(signUpName.value)', patternName.test(signUpName.value))
-    console.log('patternPassword.test(signUpPassword.value)', patternPassword.test(signUpPassword.value))
-    console.log('patternPassword.test(signUpPasswordConfirm.value)', patternPassword.test(signUpPasswordConfirm.value))
-
 
     if (
       isPasswordValid &&
