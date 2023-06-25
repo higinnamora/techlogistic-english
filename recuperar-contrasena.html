@@ -52,13 +52,18 @@
       <div class="wrapper-box">
         <h3 class="title">Recuperar contraseña</h3>
         <p class="description mb-2 text-center">Te enviaremos un correo electrónico para recuperar tu contraseña</p>
-        <form action="" class="form">
-          <div class="form-field">
-            <label for="email">Correo electrónico</label>
-            <input type="email" placeholder="Ingresa tu correo electrónico" id="email"
-              pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required />
+        <form class="form" id="recovery-password-form">
+          <div class="form-field" id="">
+            <label for="recovery-password-form-email">Correo electrónico</label>
+            <input
+              type="email"
+              placeholder="Ingresa tu correo electrónico"
+              id="recovery-password-form-email"
+              pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+              required
+            />
           </div>
-          <input class="button mb-1" type="submit" value="Recuperar contraseña" required>
+          <input class="button mb-1" type="submit" value="Recuperar contraseña" />
           <p class="block text-center">
             <a href="./sign-in.html" class="text-primary">¡Iniciar sesión!</a>
             o
