@@ -62,9 +62,9 @@
     <!-- Main -->
     <main class="container my-5 h-100">
       <div class="d-flex justify-content-between">
-        <h4 class="text-md-start text-left">Proveedores</h4>
+        <h4 class="text-md-start text-left">Ventas</h4>
         <div class="d-flex gap-2">
-          <button class="btn btn-primary btn-sm w-auto" id="btnNuevoProveedor">Nuevo proveedor</button>
+          <button class="btn btn-primary btn-sm w-auto" id="btnNuevoProveedor">Agregar</button>
           <div class="input-group w-auto">
             <input type="text" class="form-control" placeholder="Buscar proveedor" aria-label="Buscar proveedor">
             <!-- Icon buscar -->
@@ -73,59 +73,55 @@
         </div>
       </div>
       <hr>
-      <!-- Tabla de proveedores -->
+      <!-- Tabla de Ventas -->
       <ul class="nav nav-tabs">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Proveedores</a>
+          <a class="nav-link active" aria-current="page" href="#">Número de factura</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Productos</a>
+          <a class="nav-link" href="#">Id Cliente</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Nombre del cliente</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Código del producto</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Cantidad vendida</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Metodo pago</a>
         </li>
       </ul>
 
       <table class="table">
         <thead>
           <tr>
-            <th scope="col">#</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Nit</th>
+            <th scope="col">Número de factura</th>
+            <th scope="col">Id Cliente</th>
+            <th scope="col">Nombre del cliente</th>
+            <th scope="col">Código del producto</th>
+            <th scope="col">Cantidad vendida</th>
+            <th scope="col">Metodo pago</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <th scope="row">1</th>
-            <td>Innovax Corp.</td>
-            <td>NIT: 9876543210</td>
+            <th scope="row">#P12345</th>
+            <td>C12345</td>
+            <td>Juan Pérez</td>
+            <td>P12345</td>
+            <td>50</td>
+            <td>Tarjeta de crédito</td>
           </tr>
           <tr>
-            <th scope="row">2</th>
-            <td>Nexus Solutions Ltda.</td>
-            <td>NIT: 1234567890</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Globalsoft SAS</td>
-            <td>NIT: 4567890123</td>
-          </tr>
-          <tr>
-            <th scope="row">4</th>
-            <td>AdvancedTech Inc.</td>
-            <td>NIT: 2345678901</td>
-          </tr>
-          <tr>
-            <th scope="row">5</th>
-            <td>VisionaryWorks S.A.</td>
-            <td>NIT: 8901234567</td>
-          </tr>
-          <tr>
-            <th scope="row">6</th>
-            <td>TechVantage Corp.</td>
-            <td>NIT: 5678901234</td>
-          </tr>
-          <tr>
-            <th scope="row">7</th>
-            <td>Prodigy Solutions Ltda.</td>
-            <td>NIT: 3456789012</td>
+            <th scope="row">#93742</th>
+            <td>S93842</td>
+            <td>María López</td>
+            <td>P93842</td>
+            <td>100</td>
+            <td>Efectivo</td>
           </tr>
         </tbody>
       </table>
