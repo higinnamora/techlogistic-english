@@ -620,6 +620,9 @@ a.button {
   font-size: 24px;
   gap: 16px;
 }
+.footer-img {
+  width: 42px;
+}
 .footer-description {
   font-size: 16px;
   line-height: 1.5;
