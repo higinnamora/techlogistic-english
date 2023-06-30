@@ -35,13 +35,13 @@ const showMenu = (toggleId, navId) => {
     });
   }
 };
-showMenu("nav-toggle", "nav-menu");
+showMenu("navigation-toggle", "navigation-menu");
 
 // Quitar menú móvil
 const navLink = document.querySelectorAll(".navigation__link");
 
 function linkAction() {
-  const navMenu = document.getElementById("nav-menu");
+  const navMenu = document.getElementById("navigation-menu");
   // Cuando hacemos clic en nav__link, eliminamos la clase show-menu
   navMenu.classList.remove("show-menu");
 }
