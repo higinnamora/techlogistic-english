@@ -210,30 +210,29 @@
         <form class="form">
           <div class="form-field">
             <label for="name">Nombres:</label>
-            <input type="text" placeholder="Nombre/s" id="name" />
+            <input type="text" placeholder="Nombre/s" id="name" required />
           </div>
           <div class="form-field">
             <label for="apellidos">Apellidos:</label>
-            <input type="text" placeholder="Apellido/s" id="apellidos" />
+            <input type="text" placeholder="Apellido/s" id="apellidos" required />
           </div>
           <div class="form-field">
             <label for="email">Tú email:</label>
-            <input type="text" placeholder="Dirección de correo electronico" id="email" />
+            <input type="text" placeholder="Dirección de correo electronico" id="email" required
+              pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" />
           </div>
           <div class="form-field">
             <label for="business">Nombre de empresa <span>(opcional)</span>:</label>
-            <input type="text" placeholder="Nombre de su empresa o negocio" id="business" />
+            <input type="text" placeholder="Nombre de su empresa o negocio" id="business" required />
           </div>
           <div class="form-field form-field--comments">
             <label for="comment">¿En qué estás interesado?:</label>
             <textarea type="text" placeholder="Comentarios" id="comment"></textarea>
           </div>
-        </form>
-        <div class="text-right">
           <a href="./404.html">
-            <button class="button">Contactar</button>
+            <button class="button" type="submit">Contactar</button>
           </a>
-        </div>
+        </form>
       </div>
     </section>
     <!-- Footer -->
