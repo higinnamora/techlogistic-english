@@ -224,10 +224,6 @@ img {
 .active-link {
   color: var(--first-color);
 }
-/* Cambiar background header */
-.scroll-header {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
-}
 /* Scroll top */
 .scrolltop {
   align-items: center;

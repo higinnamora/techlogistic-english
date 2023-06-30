@@ -16,7 +16,6 @@ const recoveryPasswordEmail = document.getElementById(
   "recovery-password-form-email"
 );
 
-
 // Expresiones regulares
 const patternEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const patternName = /^[a-zA-ZÀ-ÿ\s]{1,40}$/;
@@ -47,16 +46,6 @@ function linkAction() {
 }
 navLink.forEach((n) => n.addEventListener("click", linkAction));
 
-// Cambiar encabezado de fondo
-function scrollHeader() {
-  const nav = document.getElementById("header");
-  // cuando el desplazamiento es mayor que 200 de altura de ventana gráfica, agregue la clase de scroll-header a la etiqueta del encabezado
-  if (this.scrollY >= 200) nav.classList.add("scroll-header");
-  else nav.classList.remove("scroll-header");
-}
-
-window.addEventListener("scroll", scrollHeader);
-
 // Mostrar desplazamiento superior
 function scrollTop() {
   const scrollTop = document.getElementById("scroll-top");
@@ -78,7 +67,7 @@ const sr = ScrollReveal({
 sr.reveal(
   ".hero__data, .hero__img, .about__data, .features, .features-card, .banner, .big-card, .clients__card, .banner-chart, .contact, .copyright",
   {
-    interval: 200,
+    interval: 100,
   }
 );
 
@@ -91,14 +80,14 @@ function redirect(path) {
 
 if (signInForm) {
   signInForm.addEventListener("submit", (event) => {
-  event.preventDefault();
+    event.preventDefault();
 
-  if (
-    patternEmail.test(signInEmail.value) &&
-    patternPassword.test(signInPassword.value)
-  ) {
-    redirect("dashboard/index.html");
-  }
+    if (
+      patternEmail.test(signInEmail.value) &&
+      patternPassword.test(signInPassword.value)
+    ) {
+      redirect("dashboard/index.html");
+    }
   });
 }
 
@@ -140,7 +129,6 @@ if (signUpForm) {
 if (recoveryPasswordForm) {
   recoveryPasswordForm.addEventListener("submit", (event) => {
     event.preventDefault();
-    console.log('patternEmail.test(recoveryPasswordEmail.value)', patternEmail.test(recoveryPasswordEmail.value))
     if (patternEmail.test(recoveryPasswordEmail.value)) {
       redirect("./proceso-exitoso.html");
     }
