@@ -711,7 +711,9 @@ a.button {
   width: 100%;
 }
 .newsletter-form button {}
-
+.newsletter-input {
+  margin: 10px 0; 
+}
 @media screen and (min-width: 768px) {
   .footer-logo {
     font-size: 16px;

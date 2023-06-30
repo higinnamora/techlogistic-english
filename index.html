@@ -296,9 +296,10 @@
               <h3 class="footer-title">Suscríbete a nuestro boletín</h3>
               <form class="newsletter-form" id="newsletter-form">
                 <div class="form-field">
-                  <input type="text" placeholder="Ingresa tu correo" class="newsletter-input">
+                  <input type="email" placeholder="Ingresa tu correo" class="newsletter-input"
+                    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
+                  <button class="button" type="submit">Suscribirse</button>
                 </div>
-                <button class="button" type="submit">Suscribirse</button>
               </form>
             </div>
           </div>
