@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Techlogistic</title>
+  <meta name="description" content="">
+  <!-- Favicon -->
+  <link rel="icon" href="../../favicon.png">
+  <!-- Box icons-->
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <!-- Estilos CSS -->
+  <link rel="stylesheet" href="../../styles/techlogistic.css">
+</head>
+
+<body class="vh-100">
+  <!-- Header -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container">
+      <a href="../index.html" class="navbar-brand" title="Techlogistic"><img src="../../favicon.png" alt=""
+          class="navigation__image">Techlogistic</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto me-4 mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../proveedores/">Proveedores</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../produccion/">Producción</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../inventario/">Inventario</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../ventas/">Ventas</a>
+          </li>
+          <!-- Menu desplegable d-c flexon foto del  flex-columnusuario -->
+          <li class="nav-item dropdown">
+            <div class="dropdown" role="group">
+              <a class="dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="../../images/profile/profile.png" alt="mdo" class="rounded-circle" width="38" height="38" />
+              </a>
+              <ul class="dropdown-menu dropdown-menu-lg-end">
+                <li><a class="dropdown-item" href="#">Mi perfil</a></li>
+                <li><a class="dropdown-item" href="#">Configuración</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="../index.html">Cerrar sesión</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main -->
+  <main class="container my-5 h-100">
+    <form style="margin: 0 auto; width: 580px;">
+      <h4 class="text-md-start text-left">Nuevo producto</h4>
+      <div class="mb-3">
+        <label for="codigoProducto" class="form-label">Código de Producto</label>
+        <input type="text" class="form-control" id="codigoProducto" placeholder="#P">
+      </div>
+      <div class="mb-3">
+        <label for="nombreProducto" class="form-label">Nombre de Producto</label>
+        <input type="text" class="form-control" id="nombreProducto" placeholder="Camisa de algodón">
+      </div>
+      <div class="mb-3">
+        <label for="categoriaProducto" class="form-label">Categoría</label>
+        <input type="text" class="form-control" id="categoriaProducto" placeholder="Ropa">
+      </div>
+      <div class="mb-3">
+        <label for="marcaProducto" class="form-label">Marca</label>
+        <input type="text" class="form-control" id="marcaProducto" placeholder="FashCo">
+      </div>
+      <div class="mb-3">
+        <label for="cantidadProducto" class="form-label">Cantidad en Bodega</label>
+        <input type="number" class="form-control" id="cantidadProducto" placeholder="50">
+      </div>
+      <div class="mb-3">
+        <label for="precioProducto" class="form-label">Precio Unitario</label>
+        <input type="text" class="form-control" id="precioProducto" placeholder="$25">
+      </div>
+      <div class="mb-3">
+        <label for="ingresoProducto" class="form-label">Fecha de Ingreso</label>
+        <input type="date" class="form-control" id="ingresoProducto">
+      </div>
+      <div class="mb-3">
+        <label for="vencimientoProducto" class="form-label">Fecha de Vencimiento</label>
+        <input type="date" class="form-control" id="vencimientoProducto">
+      </div>
+      <a href="./index.html">
+        <button type="button" class="btn btn-primary">Agregar producto</button>
+      </a>
+    </form>
+  </main>
+  
+  <footer class="copyright">
+    <div class="bd-container">
+      <p>💙 © 2023 Techlogistic. Todos los derechos reservados. 💚</p>
+      <p><a href="./terminos-y-condiciones.html">Términos y Condiciones</a> · <a
+          href="./politica-de-privacidad.html">Política de Privacidad</a></p>
+    </div>
+  </footer>
+
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
