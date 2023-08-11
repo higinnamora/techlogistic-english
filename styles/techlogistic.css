@@ -488,6 +488,12 @@ a.button {
   border-radius: 12px;
   padding: 24px 16px;
 }
+.clients__logo {
+  text-align: center;
+}
+.clients__logo img {
+  width: 120px;
+}
 .clients__card h4 {
   color: var(--secondary-color);
   font-size: 18px;
