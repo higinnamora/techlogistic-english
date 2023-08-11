@@ -260,7 +260,7 @@ background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(100,102,233,0.20
 .hero__data {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 48px);
+  /* height: calc(100vh - 48px); */
   margin-top: 48px;
   padding-top: 48px;
 }
@@ -287,7 +287,7 @@ background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(100,102,233,0.20
   margin-top: auto;
 }
 .hero__image p {
-  margin-bottom: 8px;
+  margin-bottom: 48px;
 }
 .hero__image img {
   border-radius: 4px;
@@ -853,7 +853,7 @@ a.button {
     display: none;
   }
   .hero__container {
-    height: 100vh;
+    /* height: 100vh; */
     justify-items: center;
   }
   .services__container,
