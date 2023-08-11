@@ -67,97 +67,28 @@
 
   <!-- Main -->
   <main class="container my-5 h-100">
-    <div class="d-flex justify-content-between">
-      <h4 class="text-md-start text-left">Ventas</h4>
-      <div class="d-flex gap-2">
-        <a href="../../404.html"><button class="btn btn-primary w-auto" >Agregar</button></a>
-
-        <div class="input-group w-auto">
-          <input type="text" class="form-control" placeholder="Buscar proveedor" aria-label="Buscar proveedor">
-          <!-- Icon buscar -->
-          <span class="input-group-text" id="basic-addon2"><i class='bx bx-search'></i></span>
-        </div>
+    <!-- Encabezado de la página de Proveedores (mismo código) -->
+    <!-- Formulario para agregar un nuevo proveedor -->
+    <form style="margin: 0 auto; width: 580px;">
+      <h4 class="text-md-start text-left">Nuevo Proveedor</h4>
+      <div class="mb-3">
+        <label for="nombreProveedor" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombreProveedor" placeholder="Ingrese el nombre del proveedor">
       </div>
-    </div>
-    <hr>
-    <!-- Tabla de Ventas -->
-    <ul class="nav nav-tabs">
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">Número de factura</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="../../404.html">Id Cliente</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="../../502.html">Nombre del cliente</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="../../404.html">Código del producto</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="../../502.html">Cantidad vendida</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="../../404.html">Metodo pago</a>
-      </li>
-    </ul>
-
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">Número de factura</th>
-          <th scope="col">Id Cliente</th>
-          <th scope="col">Nombre del cliente</th>
-          <th scope="col">Código del producto</th>
-          <th scope="col">Cantidad vendida</th>
-          <th scope="col">Metodo pago</th>
-          <th scope="col"></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">#P12345</th>
-          <td>C12345</td>
-          <td>Juan Pérez</td>
-          <td>P12345</td>
-          <td>50</td>
-          <td>Tarjeta de crédito</td>
-          <td>
-            <div class="dropdown">
-              <button class="btn btn-sm btn-outline-secondary border-0" type="button" id="dropdownMenuButton1"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                <i class='bx bx-dots-horizontal-rounded'></i>
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="#">Editar</a></li>
-                <li><a class="dropdown-item" href="#">Eliminar</a></li>
-              </ul>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <th scope="row">#93742</th>
-          <td>S93842</td>
-          <td>María López</td>
-          <td>P93842</td>
-          <td>100</td>
-          <td>Efectivo</td>
-          <td>
-            <div class="dropdown">
-              <button class="btn btn-sm btn-outline-secondary border-0" type="button" id="dropdownMenuButton1"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                <i class='bx bx-dots-horizontal-rounded'></i>
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="#">Editar</a></li>
-                <li><a class="dropdown-item" href="#">Eliminar</a></li>
-              </ul>
-            </div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+      <div class="mb-3">
+        <label for="nitProveedor" class="form-label">NIT</label>
+        <input type="text" class="form-control" id="nitProveedor" placeholder="Ingrese el NIT del proveedor">
+      </div>
+      <div class="mb-3">
+        <label for="emailProveedor" class="form-label">Email</label>
+        <input type="email" class="form-control" id="emailProveedor" placeholder="Ingrese el email del proveedor">
+      </div>
+      <a href="./index.html">
+        <button type="button" class="btn btn-primary">Agregar Proveedor</button>
+      </a>
+    </form>
   </main>
+  
   <footer class="copyright">
     <div class="bd-container">
       <p>💙 © 2023 Techlogistic. Todos los derechos reservados. 💚</p>
