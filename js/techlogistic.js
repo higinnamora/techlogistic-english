@@ -141,37 +141,71 @@ if (recoveryPasswordForm) {
   });
 }
 
-// Función genérica para validar el envío del formulario y redirigir
-function submitAndRedirect(form, redirectPath) {
+// Función genérica para validar el envío del formulario y mostrar el modal de éxito
+function validateAndShowSuccessModal(form, message, redirectTo) {
   form.addEventListener("submit", (event) => {
     event.preventDefault();
-    console.log('submitAndRedirect')
-    // No prevenimos el envío por defecto aquí, para permitir que el formulario se envíe si es válido
+
+    // Validar el formulario
     const isValid = form.checkValidity();
     if (!isValid) {
-      // Si el formulario no es válido, prevenimos el envío y mostramos mensajes de validación si es necesario
-      form.reportValidity(); // Esto mostrará los mensajes de validación si hay campos inválidos
+      // Si el formulario no es válido, muestra mensajes de validación
+      form.reportValidity();
     } else {
-      // Si el formulario es válido, realizamos la redirección
-      redirect(redirectPath);
+      // Si el formulario es válido, muestra el modal de éxito
+      showSuccessModal(message, redirectTo);
     }
   });
 }
 
-// Aplicar validación y redirección para cada formulario
+// Aplicar validación y mostrar el modal de éxito para cada formulario
+if (signInForm) {
+  validateAndShowSuccessModal(signInForm, "Inicio de sesión exitoso", "/dashboard/index.html");
+}
+
+if (signUpForm) {
+  validateAndShowSuccessModal(signUpForm, "Registro exitoso", "./proceso-exitoso.html");
+}
+
+if (recoveryPasswordForm) {
+  validateAndShowSuccessModal(recoveryPasswordForm, "Recuperación de contraseña exitosa", "./proceso-exitoso.html");
+}
+
 if (formNewProvider) {
-  console.log('formNewProvider')
-  submitAndRedirect(formNewProvider, "/dashboard/proveedores/index.html");
+  validateAndShowSuccessModal(formNewProvider, "Proveedor creado exitosamente", "/dashboard/proveedores/index.html");
 }
 
 if (formNewOrder) {
-  submitAndRedirect(formNewOrder, "/dashboard/produccion/index.html");
+  validateAndShowSuccessModal(formNewOrder, "Orden creada exitosamente", "/dashboard/produccion/index.html");
 }
 
 if (formNewProduct) {
-  submitAndRedirect(formNewProduct, "/dashboard/inventario/index.html");
+  validateAndShowSuccessModal(formNewProduct, "Producto creado exitosamente", "/dashboard/inventario/index.html");
 }
 
 if (formNewSale) {
-  submitAndRedirect(formNewSale, "/dashboard/ventas/index.html");
+  validateAndShowSuccessModal(formNewSale, "Venta realizada exitosamente", "/dashboard/ventas/index.html");
+}
+
+
+
+function showSuccessModal(message, redirectTo) {
+  const successModal = new bootstrap.Modal(document.getElementById("successModal"), {
+    backdrop: "static", // Impide cerrar el modal al hacer clic fuera de él
+    keyboard: false, // Impide cerrar el modal con la tecla "Esc"
+  });
+
+  // Configura el mensaje en el modal
+  const successModalMessage = document.getElementById("successModalMessage");
+  successModalMessage.textContent = message;
+
+  // Abre el modal
+  successModal.show();
+
+  // Escucha el evento de clic en el botón "Aceptar" dentro del modal
+  const acceptButton = document.querySelector("#successModal .modal-footer button");
+  acceptButton.addEventListener("click", () => {
+    // Redirige a la página especificada
+    window.location.href = redirectTo;
+  });
 }
