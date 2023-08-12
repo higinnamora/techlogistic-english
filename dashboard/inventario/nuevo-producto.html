@@ -71,35 +71,35 @@
       <h4 class="text-md-start text-left">Nuevo producto</h4>
       <div class="mb-3">
         <label for="codigoProducto" class="form-label">Código de Producto</label>
-        <input type="text" class="form-control" id="codigoProducto" placeholder="#P">
+        <input type="text" class="form-control" id="codigoProducto" placeholder="#P" required>
       </div>
       <div class="mb-3">
         <label for="nombreProducto" class="form-label">Nombre de Producto</label>
-        <input type="text" class="form-control" id="nombreProducto" placeholder="Camisa de algodón">
+        <input type="text" class="form-control" id="nombreProducto" placeholder="Camisa de algodón" required>
       </div>
       <div class="mb-3">
         <label for="categoriaProducto" class="form-label">Categoría</label>
-        <input type="text" class="form-control" id="categoriaProducto" placeholder="Ropa">
+        <input type="text" class="form-control" id="categoriaProducto" placeholder="Ropa" required>
       </div>
       <div class="mb-3">
         <label for="marcaProducto" class="form-label">Marca</label>
-        <input type="text" class="form-control" id="marcaProducto" placeholder="FashCo">
+        <input type="text" class="form-control" id="marcaProducto" placeholder="FashCo" required>
       </div>
       <div class="mb-3">
         <label for="cantidadProducto" class="form-label">Cantidad en Bodega</label>
-        <input type="number" class="form-control" id="cantidadProducto" placeholder="50">
+        <input type="number" class="form-control" id="cantidadProducto" placeholder="50" required>
       </div>
       <div class="mb-3">
         <label for="precioProducto" class="form-label">Precio Unitario</label>
-        <input type="text" class="form-control" id="precioProducto" placeholder="$25">
+        <input type="text" class="form-control" id="precioProducto" placeholder="$25" required>
       </div>
       <div class="mb-3">
         <label for="ingresoProducto" class="form-label">Fecha de Ingreso</label>
-        <input type="date" class="form-control" id="ingresoProducto">
+        <input type="date" class="form-control" id="ingresoProducto" required>
       </div>
       <div class="mb-3">
         <label for="vencimientoProducto" class="form-label">Fecha de Vencimiento</label>
-        <input type="date" class="form-control" id="vencimientoProducto">
+        <input type="date" class="form-control" id="vencimientoProducto" required>
       </div>
       <input type="submit" class="btn btn-primary" value="Agregar producto" />
     </form>
@@ -116,6 +116,11 @@
   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
     crossorigin="anonymous"></script>
+
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <script src="../../js/techlogistic.js"></script>
 </body>
 
 </html>
