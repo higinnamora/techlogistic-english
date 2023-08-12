@@ -16,10 +16,16 @@ const recoveryPasswordEmail = document.getElementById(
   "recovery-password-form-email"
 );
 
+const formNewProduct = document.getElementById("form-new-product");
+const formNewProvider = document.getElementById("form-new-provider");
+const formNewOrder = document.getElementById("form-new-order");
+const formNewSale = document.getElementById("form-new-sale");
+
 // Expresiones regulares
 const patternEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const patternName = /^[a-zA-ZÀ-ÿ\s]{1,40}$/;
 const patternPassword = /^.{8,}$/;
+const patternId = /^[0-9]{1,10}$/;
 
 // Mostrar menú
 const showMenu = (toggleId, navId) => {
@@ -133,4 +139,39 @@ if (recoveryPasswordForm) {
       redirect("./proceso-exitoso.html");
     }
   });
+}
+
+// Función genérica para validar el envío del formulario y redirigir
+function submitAndRedirect(form, redirectPath) {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    console.log('submitAndRedirect')
+    // No prevenimos el envío por defecto aquí, para permitir que el formulario se envíe si es válido
+    const isValid = form.checkValidity();
+    if (!isValid) {
+      // Si el formulario no es válido, prevenimos el envío y mostramos mensajes de validación si es necesario
+      form.reportValidity(); // Esto mostrará los mensajes de validación si hay campos inválidos
+    } else {
+      // Si el formulario es válido, realizamos la redirección
+      redirect(redirectPath);
+    }
+  });
+}
+
+// Aplicar validación y redirección para cada formulario
+if (formNewProvider) {
+  console.log('formNewProvider')
+  submitAndRedirect(formNewProvider, "/dashboard/proveedores/index.html");
+}
+
+if (formNewOrder) {
+  submitAndRedirect(formNewOrder, "/dashboard/produccion/index.html");
+}
+
+if (formNewProduct) {
+  submitAndRedirect(formNewProduct, "/dashboard/inventario/index.html");
+}
+
+if (formNewSale) {
+  submitAndRedirect(formNewSale, "/dashboard/ventas/index.html");
 }

@@ -67,9 +67,7 @@
 
   <!-- Main -->
   <main class="container my-5 h-100">
-    <!-- Encabezado de la página de Proveedores (mismo código) -->
-    <!-- Formulario para agregar un nuevo proveedor -->
-    <form style="margin: 0 auto; width: 580px;">
+    <form style="margin: 0 auto; width: 580px;" id="form-new-sale">
       <h4 class="text-md-start text-left">Nueva venta</h4>
       <div class="mb-3">
         <label for="numeroFactura" class="form-label">Número de Factura</label>
@@ -95,9 +93,7 @@
         <label for="metodoPago" class="form-label">Método de Pago</label>
         <input type="text" class="form-control" id="metodoPago" placeholder="Tarjeta de crédito">
       </div>
-      <a href="./index.html">
-        <button type="button" class="btn btn-primary">Agregar venta</button>
-      </a>
+      <input type="submit" class="btn btn-primary" value="Agregar venta" />
     </form>
   </main>
   
