@@ -1006,3 +1006,10 @@ a.button {
   top: 79%;
   right: 38%;
 }
+
+
+/* Helpers */
+
+.hide {
+  display: none!important;
+}
